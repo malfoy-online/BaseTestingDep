@@ -1,5 +1,6 @@
 The DriverManager class supports the following browser types:
 
-Chrome ("Chrome")
-Firefox ("Firefox")
-Edge ("Edge")
+1. Chrome ("Chrome")
+2. Firefox ("Firefox")
+3. Edge ("Edge")
+
