@@ -16,6 +16,10 @@ public class DriverManager {
     private static String[] browserArguments;
 
     private DriverManager(){
+        // Initialize browserArguments to an empty array if it's null
+        if (browserArguments == null) {
+            browserArguments = new String[0]; // Default to an empty array if no arguments are provided
+        }
         if(browserChoice.equalsIgnoreCase(BaseBrowserConstants.CHROME_BROWSER)){
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
@@ -42,6 +46,7 @@ public class DriverManager {
 
     public static WebDriver getDriver(String browserType){
          browserChoice = browserType;
+         browserArguments = new String[0];
          new DriverManager();
          return driver;
     }
